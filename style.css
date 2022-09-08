@@ -94,6 +94,40 @@ body {
     user-select: none;
 }
 
+.controls .cont .valor.vertical {
+    cursor: ns-resize;   
+}
+
+.controls .cont .valor.horizontal {
+    cursor: ew-resize;
+}
+
+.controls .options {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    z-index: 400;
+}
+
+.controls .options div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.controls .options .pause p {
+    margin-left: 5px;
+    font-size: 0.7rem;
+    color: white;
+    font-family: consolas;
+}
+
+.valor .hidder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+}
+
 .valor input, .valor input:disabled {
     border: none;
     appearance: none;
@@ -129,6 +163,7 @@ body {
     align-items: center;
     padding: 2px;
     cursor: pointer;
+    z-index: 5002;
 }
 
 .valor button svg {

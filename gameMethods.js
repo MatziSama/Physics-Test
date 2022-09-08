@@ -17,13 +17,13 @@ let myMap = {
     pause: function() {
         clearInterval(this.interval);
         this.interval = null;
-        changeTitle();
+        changeTitle("pause");
     },
     play: function() {
         if (this.interval !== null) return;
 
         this.interval = setInterval(updateMap, 20);
-        changeTitle();
+        changeTitle("play");
     },
     clear: function() {
         this.context.clearRect(0,0, this.canvas.width, this.canvas.height);
@@ -85,12 +85,19 @@ function updateMap() {
     player.updateParams();
 }
 
-function changeTitle() {
-    const title = document.getElementById("title");
+function staticUpdate() {
+    myMap.clear();
+    player.update();
+    player.updateParams();
+}
 
-    if (title.innerText === "Playing!") {
+function changeTitle(mode) {
+    const title = document.getElementById("title");
+    if (!mode) return;
+
+    if (mode === "play") {
         title.innerText = "Paused!";
-    } else {
+    } else if (mode === "pause") {
         title.innerText = "Playing!"
     }
 }

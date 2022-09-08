@@ -22,36 +22,48 @@
 
     <div class="controls">
         <div class="cont">
-            <div class="valor">
+            <div class="valor vertical">
+                <div class="hidder"></div>
                 <p>Gravity</p>
-                <input type="number" id="gravity">
+                <input type="number" id="gravity" disabled>
                 <button id="accelerate">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                         <path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/>
                     </svg>
                 </button>
             </div>
-            <div class="valor">
+            <div class="valor" id="noselect">
+                <div class="hidder"></div>
                 <p>Gravity Speed</p>
-                <input type="number" id="gravitySpeed" readonly="readonly" disabled>
+                <input type="number" id="gravitySpeed" disabled>
             </div>
-            <div class="valor">
+            <div class="valor horizontal">
+                <div class="hidder"></div>
                 <p>Square Width</p>
-                <input type="number" id="squareW">
+                <input type="number" id="squareW" disabled>
             </div>
-            <div class="valor">
+            <div class="valor vertical">
+                <div class="hidder"></div>
                 <p>Square Heigth</p>
-                <input type="number" id="squareH">
+                <input type="number" id="squareH" disabled>
             </div>
-            <div class="valor">
+            <div class="valor vertical">
+                <div class="hidder"></div>
                 <p>Square Y</p>
-                <input type="number" id="squareY">
+                <input type="number" id="squareY" disabled>
             </div>
-            <div class="valor">
+            <div class="valor horizontal">
+                <div class="hidder"></div>
                 <p>Square X</p>
-                <input type="number" id="squareX">
+                <input type="number" id="squareX" disabled>
             </div>
             
+        </div>
+        <div class="options">
+            <div class="pause">
+                <input type="checkbox" name="pauseonchange" id="pause">
+                <p>Pause on changes</p>
+            </div>
         </div>
     </div>
 
