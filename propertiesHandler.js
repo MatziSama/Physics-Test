@@ -119,7 +119,7 @@ function changeValue(id, value) {
         case "squareW":
             v = player.width + parseFloat(value);
             if (v <= 0) {
-                plaher.width = 1;
+                player.width = 1;
                 break;
             }
 
