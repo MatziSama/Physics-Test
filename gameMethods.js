@@ -95,9 +95,15 @@ function changeTitle(mode) {
     const title = document.getElementById("title");
     if (!mode) return;
 
-    if (mode === "play") {
-        title.innerText = "Paused!";
-    } else if (mode === "pause") {
-        title.innerText = "Playing!"
+
+    switch (mode) {
+        case "pause":
+            title.innerText = "Paused!";
+            break;
+        case "play":
+            title.innerText = "Playing!"
+            break;
+        default:
+            break;
     }
 }
